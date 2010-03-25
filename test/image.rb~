@@ -1,0 +1,11 @@
+require "../lib/cgp/image.rb"
+require "../lib/cgp/image_transform.rb"
+module Cgp
+
+i = Image.new(200,100,"green")
+j = ImageTransform.new(i)
+j.place_text("0123ADGE")
+j.write("final")
+end
+
+

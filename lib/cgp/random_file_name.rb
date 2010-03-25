@@ -1,0 +1,19 @@
+require_relative "../cgp/random.rb"
+module Cgp
+	class RandomFileName < Random
+		attr_reader :file_name
+		def initialize(total_chars)
+			@file_name = []
+			
+			1.upto(total_chars) do
+				number = super(0) * 10
+				@file_name << Integer(number)
+			end
+		end
+		
+		def to_s
+			"#{@file_name.join}"
+		end
+	end
+end
+
